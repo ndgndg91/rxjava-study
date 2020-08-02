@@ -22,7 +22,8 @@ public class RxjavaApplication {
 //        asyncSubjectExample();
 //        behaviorSubjectExample();
 //        publishSubjectExample();
-        replaySubjectExample();
+//        replaySubjectExample();
+        connectableObservableExample();
     }
 
     private static void firstExample() {
@@ -78,5 +79,14 @@ public class RxjavaApplication {
     private static void replaySubjectExample() {
         ReplaySubjectExample replaySubjectExample = new ReplaySubjectExample();
         replaySubjectExample.replay();
+    }
+
+    private static void connectableObservableExample() {
+        ConnectableObservableExample connectableObservableExample = new ConnectableObservableExample();
+        try {
+            connectableObservableExample.connectable();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
