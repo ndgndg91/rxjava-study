@@ -10,17 +10,47 @@ public class RxjavaApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(RxjavaApplication.class, args);
-        FirstExample example = new FirstExample();
+        FirstExample firstExample = new FirstExample();
 
-        example.emit();
+        firstExample.emit();
 
-        example.redGreenBlue();
+        firstExample.redGreenBlue();
 
-        example.create();
+        CreateExample createExample = new CreateExample();
 
-        example.fromArray();
+        createExample.create();
 
-        example.fromArrayBoxed();
+        FromExample fromExample = new FromExample();
+
+        fromExample.fromArray();
+
+        fromExample.fromArrayBoxed();
+
+        fromExample.fromIterableOfList();
+
+        fromExample.fromIterableOfSet();
+
+        fromExample.usingBlockingQueue();
+
+        fromExample.fromCallable();
+
+        fromExample.fromFuture();
+
+        fromExample.fromPublisher();
+
+        SingleExample singleExample = new SingleExample();
+
+        singleExample.just();
+
+        singleExample.fromObservable();
+
+        singleExample.singleFunction();
+
+        singleExample.firstFunction();
+
+        singleExample.singleFromEmpty();
+
+        singleExample.takeFunction();
     }
 
 }
